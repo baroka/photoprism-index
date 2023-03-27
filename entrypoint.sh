@@ -14,7 +14,7 @@ update_index() {
 # Monitorize photo folder
 echo "photoprism-index start.."
 
-inotifywait -m -r -e create,delete,move,modify,attrib $watchDir | while read line; do  
+inotifywait -m -e create,delete,move,modify,attrib $watchDir | while read line; do  
   echo "changes detected.. ${line}"
   update_index
 done
