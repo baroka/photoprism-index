@@ -10,7 +10,7 @@ COPY entrypoint.sh .
 RUN chmod a+x entrypoint.sh
 
 # Install packages
-RUN apk update && apk add --no-cache inotify-tools jq
+RUN apk update && apk add --no-cache inotify-tools curl
 
 # Timezone
 RUN apk update && apk add tzdata
